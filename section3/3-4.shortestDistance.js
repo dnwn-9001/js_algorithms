@@ -12,12 +12,12 @@ function solution(s, t) {
     }
   }
 
-  console.log(answer);
   p = 100;
   for (let k = s.length - 1; k >= 0; k--) {
     if (s[k] !== t) {
       p++;
-      answer[k] > p ? (answer[k] = p) : "";
+      // answer[k] > p ? (answer[k] = p) : "";
+      answer[k] = Math.min(answer[k], p);
     } else {
       p = 0;
     }
